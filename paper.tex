@@ -7,7 +7,7 @@
 \usepackage{subcaption}
 
 %% Sets page size and margins
-\usepackage[a4paper,top=3cm,bottom=2cm,left=3cm,right=3cm,marginparwidth=1.75cm]{geometry}
+\usepackage[a4paper,top=3cm,bottom=2cm,left=3cm,right=3cm,marginparwidth=2cm]{geometry}
 
 %% Useful packages
 \usepackage{amsmath}
@@ -80,5 +80,33 @@ AR and VR are two hot concept today, prevalent people also know them as VR film 
 		\caption{AR system}
 		\label{fig:fig1}
 	\end{figure}
+
+
+
+\section{Risk register}
+
+
+\begin{table}[!htp]
+\caption{\label{tab:widgets}Risks}
+\centering
+\begin{tabular}{ | p{0.5cm}| p{4.5cm}|p{4cm} | p{1.9cm}| p{1.2cm} | p{1.2cm} | }
+
+\hline
+ &\textbf{Risks}&\textbf{Mitigation}&\textbf{Likelihood}&\textbf{Impact}&\textbf{Score}\\ 
+\hline
+\textbf{1}&Can not understand RGB-D SLAM system&Ask research assistant immediately when some code is difficult to understand&1&3&3\\ 
+\hline
+\textbf{2}&Late arrive of RGB-D sensor&Ask supervisor to buy RGB-D sensor early, prepare some other work to do&1&2&2\\ 
+\hline
+\textbf{3}&Failure to connect RGB-D sensor with SLAM system&Work together with my college who also use this RGB-D sensor and keep in touch with research assistant&2&4&8\\ 
+\hline
+\textbf{4}&Can not find problem when debugging the program, after all programming&Make small objects and debug AR system after program every part of the code&2&4&8\\ 
+\hline
+\textbf{5}&Break the RGB-D sensor&Calibrate the RGB-D sensor strictly as the specification. Be careful with RGB-D sensor and keep it safe after experiment &1&4&4\\ 
+\hline
+\textbf{6}&Do not have enough time to explore the application of AR system&Complete tasks as the time line strictly, give feedback to supervisor after every task &1&4&4\\ 
+\hline
+\end{tabular}
+\end{table}
 
 \end{document}
