@@ -82,6 +82,45 @@ AR and VR are two hot concept today, prevalent people also know them as VR film 
 	\end{figure}
 
 
+\newpage
+\section{Literature Review}
+\subsection{Visual based SLAM}
+Simultaneous Localisation and Mapping (SLAM) is a process that a mobile robot builds a complete map of an unknown environment and note its own location in this map. The solution of this problem is an important sign for mobile robotics which means the mobile robot is truly autonomous. To solve this problem, a lot of approaches have been developed. The most popular one is Kalman filter based approach. This approach is popular because it directly provides recursive solutions to the navigation problem and the uncertainty of vehicle and map landmark locations based on statistical motion model of vehicle and observation model of landmarks \cite{938381}. Details are shown in figure 2.
+
+\begin{figure}[!htp]
+
+
+\centering
+\includegraphics[width=1\textwidth]{3.png}
+\caption{\label{fig:frog}Details of SLAM problem}
+\end{figure}
+In this figure, xk is the state vector describing the location and orientation of the vehicle, uk is the control vector, vehicle move from xk-1 to xk in time k, mi is the location of landmark, zkj is an observation model of landmark mj viewing from xk. Our goal is obtaining the probability distribution of the relative positions of vehicle and landmarks which means the map \cite{1638022}:
+\begin{equation}
+P(x_k,m | Z_{0:k}, U_{0:k}, x_0)
+\end{equation}
+For calculating this probability distribution, motion model and observation model are necessary, which are described in following form respectively.
+\begin{equation}
+P(x_k | x_{k-1}, u_k)
+\end{equation}
+\begin{equation}
+P(z_k | x_k, m)
+\end{equation}
+
+With motion model and observation model, a recursive process can be calculated, which are prediction and correction describing in following form respectively.
+\begin{equation}
+P(x_k,m | Z_{0:k-1}, U_{0:k}, x_0)=\int P(x_k | x_{k-1}, u_k)P(x_{k-1},m | Z_{0:k-1}, U_{0:k-1}, x_0)dx_{k-1}
+\end{equation}
+\begin{equation}
+P(x_k,m | Z_{0:k}, U_{0:k}, x_0)=\frac{P(z_k | x_k, m)P(x_k,m | Z_{0:k-1}, U_{0:k}, x_0)}{P(z_k | Z_{0:k-1}, U_{0:k})}
+\end{equation}
+
+After this recursive process, a map can be built by landmarks. In addition, the location of vehicle can be determined by the observation results.
+
+\subsection{RGB-D SLAM}
+
+
+\subsection{Augmented reality using RGB-D slam}
+
 
 \section{Risk register}
 
@@ -118,6 +157,7 @@ AR and VR are two hot concept today, prevalent people also know them as VR film 
 \caption{\label{fig:frog}Timeline}
 \end{figure}
 
-
+\bibliographystyle{ieeetr}
+\bibliography{zz}
 
 \end{document}
